@@ -18,7 +18,7 @@
   (let ((level (make <demo-level> #:player player #:width width #:height height
                     #:background (load-asset "space.png")
                     #:player-bullet-system (make-bullet-system 1000 bullet-sprites)
-                    #:enemy-bullet-system (make-bullet-system 10000 bullet-sprites))))
+                    #:enemy-bullet-system (make-bullet-system 50000 bullet-sprites))))
     (set! (bullet-system player) (player-bullet-system level))
     (init-level level)
     level))
@@ -35,4 +35,3 @@
 ;;      (emit-circle system (/ (width level) 2) 100 30 12 rotate 100 0 10 'medium-blue)
 ;;      (level-wait level 15)
 ;;      (loop system (+ rotate 5)))))
-
